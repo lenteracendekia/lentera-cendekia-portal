@@ -1,13 +1,14 @@
+import clsx from "clsx";
 import { useMemo } from "react";
 
 interface BrandProps extends React.HTMLAttributes<HTMLDivElement> {
   title?: string;
 }
 
-export const Brand = ({ title, ...rest }: BrandProps) =>
+export const Brand = ({ title, className = "", ...rest }: BrandProps) =>
   useMemo(
     () => (
-      <div {...rest}>
+      <div {...rest} className={clsx(className, "flex items-center gap-3")}>
         <svg
           width="30"
           height="30"
@@ -33,8 +34,8 @@ export const Brand = ({ title, ...rest }: BrandProps) =>
             fill="#1B1B1B"
           />
         </svg>
-        <span>{title}</span>
+        <span className="font-semibold">{title}</span>
       </div>
     ),
-    [title, rest],
+    [title, className, rest]
   );
