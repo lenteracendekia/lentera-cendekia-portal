@@ -3,19 +3,151 @@
 @tailwind utilities;
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+    --background: #ffffff;
+    --foreground: #171717;
+
+    /* Neutral Base Color */
+    --neutral-base: #1b1b1b;
+    --neutral-0: #ffffff;
+    --neutral-10: #f6f6f6;
+    --neutral-20: #e8e8e8;
+    --neutral-30: #bbbbbb;
+    --neutral-40: #7f7f7f;
+    --neutral-50: #575757;
+    --neutral-60: #171717;
+    --neutral-70: #121212;
+    --neutral-80: #0e0e0e;
+    --neutral-90: #090909;
+    --neutral-100: #050505;
+
+    /* Primary Base Color */
+    --primary-base: #29166f;
+    --primary-10: #d4d0e2;
+    --primary-20: #b8b1cf;
+    --primary-30: #948bb7;
+    --primary-40: #70649f;
+    --primary-50: #4d3d87;
+    --primary-60: #22125d;
+    --primary-70: #1b0f4a;
+    --primary-80: #150b38;
+    --primary-90: #0e0725;
+    --primary-100: #080416;
+
+    /* Success Base Color */
+    --success-base: #00ff00;
+    --success-100: #00ff00;
+    --success-90: #00cc99;
+    --success-80: #009966;
+    --success-70: #006633;
+    --success-60: #003300;
+    --success-50: #66ff99;
+    --success-40: #99ffcc;
+    --success-30: #ccffff;
+    --success-20: #ccffff;
+    --success-10: #e6ffff;
+
+    /* Error Base Color */
+    --error-base: #ff0000;
+    --error-100: #ff0000;
+    --error-90: #cc0000;
+    --error-80: #990000;
+    --error-70: #660000;
+    --error-60: #330000;
+    --error-50: #ff6666;
+    --error-40: #ff9999;
+    --error-30: #ffcccc;
+    --error-20: #ffcccc;
+    --error-10: #ffe6e6;
+
+    /* Warning Base Color */
+    --warning-base: #ffff00;
+    --warning-100: #312c00;
+    --warning-90: #524900;
+    --warning-80: #7b6e00;
+    --warning-70: #a39300;
+    --warning-60: #ccb700;
+    --warning-50: #ffff66;
+    --warning-40: #ffff99;
+    --warning-30: #ffffcc;
+    --warning-20: #ffffcc;
+    --warning-10: #ffffe6;
 }
 
 @media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+    :root {
+        --background: #0a0a0a;
+        --foreground: #ededed;
+
+        /* Neutral Base Color */
+        --neutral-base: #1b1b1b;
+        --neutral-0: #ffffff;
+        --neutral-10: #f6f6f6;
+        --neutral-20: #e8e8e8;
+        --neutral-30: #bbbbbb;
+        --neutral-40: #7f7f7f;
+        --neutral-50: #575757;
+        --neutral-60: #171717;
+        --neutral-70: #121212;
+        --neutral-80: #0e0e0e;
+        --neutral-90: #090909;
+        --neutral-100: #050505;
+
+        /* Primary Base Color */
+        --primary-base: #29166f;
+        --primary-10: #d4d0e2;
+        --primary-20: #b8b1cf;
+        --primary-30: #948bb7;
+        --primary-40: #70649f;
+        --primary-50: #4d3d87;
+        --primary-60: #22125d;
+        --primary-70: #1b0f4a;
+        --primary-80: #150b38;
+        --primary-90: #0e0725;
+        --primary-100: #080416;
+
+        /* Success Base Color */
+        --success-base: #00ff00;
+        --success-100: #00ff00;
+        --success-90: #00cc99;
+        --success-80: #009966;
+        --success-70: #006633;
+        --success-60: #003300;
+        --success-50: #66ff99;
+        --success-40: #99ffcc;
+        --success-30: #ccffff;
+        --success-20: #ccffff;
+        --success-10: #e6ffff;
+
+        /* Error Base Color */
+        --error-base: #ff0000;
+        --error-100: #ff0000;
+        --error-90: #cc0000;
+        --error-80: #990000;
+        --error-70: #660000;
+        --error-60: #330000;
+        --error-50: #ff6666;
+        --error-40: #ff9999;
+        --error-30: #ffcccc;
+        --error-20: #ffcccc;
+        --error-10: #ffe6e6;
+
+        /* Warning Base Color */
+        --warning-base: #ffff00;
+        --warning-100: #312c00;
+        --warning-90: #524900;
+        --warning-80: #7b6e00;
+        --warning-70: #a39300;
+        --warning-60: #ccb700;
+        --warning-50: #ffff66;
+        --warning-40: #ffff99;
+        --warning-30: #ffffcc;
+        --warning-20: #ffffcc;
+        --warning-10: #ffffe6;
+    }
 }
 
 body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+    color: var(--foreground);
+    background: var(--background);
+    font-family: Arial, Helvetica, sans-serif;
 }
