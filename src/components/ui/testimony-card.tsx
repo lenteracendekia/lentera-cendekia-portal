@@ -4,7 +4,7 @@ import { QuoteIcon } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 import Image from "next/image";
 
-interface TestimonyCardProps {
+interface TestimonyCardProps extends React.HTMLAttributes<HTMLDivElement> {
   testimony: string;
   name: string;
   accepted_at: string;
@@ -16,10 +16,14 @@ export const TestimonyCard: React.FC<TestimonyCardProps> = ({
   name,
   accepted_at,
   profile_image,
+  ...rest
 }) =>
   useMemo(
     () => (
-      <Card className="relative flex flex-col h-full mt-8 overflow-visible first:ml-8">
+      <Card
+        {...rest}
+        className="relative flex flex-col h-full mt-8 overflow-visible first:ml-8"
+      >
         <div className="absolute flex items-center justify-center w-12 h-12 rounded-full shadow-md -top-6 -left-6 md:w-14 md:h-14 bg-warning-20">
           <QuoteIcon className="w-5 h-5 md:w-6 md:h-6 text-neutral-base" />
         </div>

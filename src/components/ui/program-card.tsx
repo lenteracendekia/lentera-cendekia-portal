@@ -20,12 +20,13 @@ export const ProgramCard: React.FC<ProgramCardProps> = ({
   name,
   short_description,
   image,
+  ...rest
 }) =>
   useMemo(
     () => (
       <Drawer>
         <DrawerTrigger>
-          <Card>
+          <Card {...rest}>
             <Image
               src={image}
               alt={`Top Program Image ${name}`}

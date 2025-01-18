@@ -2,7 +2,7 @@ import clsx from "clsx";
 import Image from "next/image";
 import { useMemo } from "react";
 
-interface AdventageProps {
+interface AdventageProps extends React.HTMLAttributes<HTMLDivElement> {
   image: string;
   reverse: string;
   title: string;
@@ -14,10 +14,12 @@ export const Advantage: React.FC<AdventageProps> = ({
   reverse,
   title,
   description,
+  ...rest
 }) =>
   useMemo(
     () => (
       <div
+        {...rest}
         className={clsx(
           "flex flex-col items-center gap-12",
           reverse && "md:flex-row-reverse",

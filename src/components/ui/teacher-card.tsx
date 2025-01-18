@@ -13,10 +13,14 @@ export const TeacherCard: React.FC<TeacherCardProps> = ({
   role,
   graduated_at,
   image,
+  ...rest
 }) =>
   useMemo(
     () => (
-      <div className="flex flex-col items-center w-full p-4 mx-4 rounded-xl">
+      <div
+        {...rest}
+        className="flex flex-col items-center w-full p-4 mx-4 rounded-xl"
+      >
         <div className="relative flex items-center justify-center w-full h-full">
           <div className="absolute w-[200px] h-[250px] bg-warning-base rounded-t-full"></div>
           <Image
