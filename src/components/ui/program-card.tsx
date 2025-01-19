@@ -62,5 +62,5 @@ export const ProgramCard: React.FC<ProgramCardProps> = ({
         </DrawerContent>
       </Drawer>
     ),
-    [name, short_description, image],
+    [name, short_description, image, rest]
   );
