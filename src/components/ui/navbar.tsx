@@ -47,7 +47,7 @@ export const Navbar: React.FC<HTMLAttributes<HTMLDivElement>> = () => {
   }, [params]);
 
   return (
-    <nav className="fixed top-0 z-0 w-[100dvw] px-8 py-4 bg-white drop-shadow-md dark:bg-gray-800">
+    <nav className="fixed top-0 z-50 w-[100dvw] px-8 py-4 bg-white drop-shadow-md dark:bg-gray-800">
       <div className="flex items-center justify-between">
         <Link href={DEFAULT_ROUTE}>
           <Brand title={BRAND_TITLE} />

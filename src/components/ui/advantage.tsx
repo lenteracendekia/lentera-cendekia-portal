@@ -4,14 +4,14 @@ import { useMemo } from "react";
 
 interface AdventageProps extends React.HTMLAttributes<HTMLDivElement> {
   image: string;
-  reverse: string;
+  reverse?: boolean;
   title: string;
   description: string;
 }
 
 export const Advantage: React.FC<AdventageProps> = ({
   image,
-  reverse,
+  reverse = false,
   title,
   description,
   ...rest
@@ -23,7 +23,7 @@ export const Advantage: React.FC<AdventageProps> = ({
         className={clsx(
           "flex flex-col items-center gap-12",
           reverse && "md:flex-row-reverse",
-          !reverse && "md:flex-row",
+          !reverse && "md:flex-row"
         )}
       >
         <Image
@@ -35,7 +35,7 @@ export const Advantage: React.FC<AdventageProps> = ({
         <div
           className={clsx(
             "flex flex-col justify-center gap-5 px-5 max-w-[770px]",
-            reverse && "text-right",
+            reverse && "text-right"
           )}
         >
           <h3 className="text-3xl font-medium text-neutral-base">{title}</h3>
@@ -43,5 +43,5 @@ export const Advantage: React.FC<AdventageProps> = ({
         </div>
       </div>
     ),
-    [title, description, image, reverse],
+    [title, description, image, reverse, rest]
   );
