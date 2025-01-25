@@ -24,16 +24,14 @@ export const Header: React.FC<HeaderProps> = ({
             "items-center": direction === "center",
             "items-end": direction === "right",
           },
-          "-scroll-m-96",
+          "-scroll-m-96"
         )}
       >
         <span className="px-4 py-2 font-bold rounded-full bg-warning-20 text-warning-60">
           {title}
         </span>
-        <p className={`text-3xl font-medium md:text-${direction}`}>
-          {subtitle}
-        </p>
+        <p className={`text-3xl font-medium text-${direction}`}>{subtitle}</p>
       </div>
     ),
-    [title, subtitle, direction, rest],
+    [title, subtitle, direction, rest]
   );

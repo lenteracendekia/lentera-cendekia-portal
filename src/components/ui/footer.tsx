@@ -97,5 +97,5 @@ export const Footer: React.FC<FooterProps> = ({
         </div>
       </footer>
     ),
-    [overview, lists, contact, rest],
+    [overview, lists, contact, rest]
   );

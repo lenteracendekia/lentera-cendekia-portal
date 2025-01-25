@@ -27,5 +27,5 @@ export const FacilityCard: React.FC<FacilityCardProps> = ({
         </div>
       </div>
     ),
-    [icon, title, description],
+    [rest, icon, title, description]
   );
