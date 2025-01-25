@@ -33,5 +33,5 @@ export const Hero: React.FC<HeroProps> = ({
         </div>
       </section>
     ),
-    [title, subtitle, image]
+    [rest, className, image, title, subtitle]
   );
