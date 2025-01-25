@@ -3,6 +3,7 @@ import { useMemo } from "react";
 import { QuoteIcon } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 import Image from "next/image";
+import Link from "next/link";
 
 interface TestimonyCardProps extends React.HTMLAttributes<HTMLDivElement> {
   testimony: string;
@@ -17,8 +18,8 @@ export const TestimonyCard: React.FC<TestimonyCardProps> = ({
   accepted_at,
   profile_image,
   ...rest
-}) =>
-  useMemo(
+}) => {
+  return useMemo(
     () => (
       <Card
         {...rest}
@@ -34,14 +35,17 @@ export const TestimonyCard: React.FC<TestimonyCardProps> = ({
           <div className="flex-1">
             <p
               className={clsx(
-                "text-neutral-40 mb-3 text-xs md:text-sm line-clamp-3",
+                "text-neutral-40 mb-3 text-xs md:text-sm line-clamp-3"
               )}
             >
               {testimony}
             </p>
-            <button className="text-xs text-blue-600 md:text-sm hover:underline">
+            <Link
+              href={`/testimony/${name.toLowerCase().replace(/\s/g, "-")}`}
+              className="text-xs text-blue-600 md:text-sm hover:underline"
+            >
               Baca Lengkapnya &rarr;
-            </button>
+            </Link>
           </div>
           <div className="flex items-center mt-3 text-xs text-gray-700 md:text-sm">
             <Image
@@ -56,5 +60,6 @@ export const TestimonyCard: React.FC<TestimonyCardProps> = ({
         </CardContent>
       </Card>
     ),
-    [testimony, name, accepted_at, profile_image],
+    [rest, accepted_at, testimony, profile_image, name]
   );
+};

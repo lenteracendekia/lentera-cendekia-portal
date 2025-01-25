@@ -32,6 +32,7 @@ const Section: React.FC<SectionProps> = ({
       >
         {title && (
           <Header
+            id="about"
             title={title}
             subtitle={subtitle}
             direction={reverse ? "right" : "left"}

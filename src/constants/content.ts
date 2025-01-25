@@ -63,6 +63,86 @@ export const CONTENT = {
       image: "/images/top_program__one.svg",
     },
   ],
+  activities: [],
+  teachers: [
+    {
+      image: "/images/person__one.png",
+      name: "John Doe",
+      role: "Guru Matematika",
+      graduated_at: "Universitas Indonesia",
+    },
+    {
+      image: "/images/person__one.png",
+      name: "Jane Doe",
+      role: "Guru Bahasa Indonesia",
+      graduated_at: "Universitas Indonesia",
+    },
+    {
+      image: "/images/person__one.png",
+      name: "Jane Doe",
+      role: "Guru Bahasa Indonesia",
+      graduated_at: "Universitas Indonesia",
+    },
+  ],
+  testimonials: [
+    {
+      testimony:
+        "Saya senang bisa belajar di Lentera Cendekia. Dengan bimbingan dari tentor yang ramah dan berpengalaman, saya merasa lebih termotivasi dan antusias dalam belajar. Terima kasih Lentera Cendekia!",
+      name: "John Doe",
+      accepted_at: "Universitas Indonesia",
+      profile_image: "/images/person__one.png",
+    },
+    {
+      testimony:
+        "Saya senang bisa belajar di Lentera Cendekia. Dengan bimbingan dari tentor yang ramah dan berpengalaman, saya merasa lebih termotivasi dan antusias dalam belajar. Terima kasih Lentera Cendekia!",
+      name: "Jane Doe",
+      accepted_at: "Universitas Indonesia",
+      profile_image: "/images/person__one.png",
+    },
+    {
+      testimony:
+        "Saya senang bisa belajar di Lentera Cendekia. Dengan bimbingan dari tentor yang ramah dan berpengalaman, saya merasa lebih termotivasi dan antusias dalam belajar. Terima kasih Lentera Cendekia!",
+      name: "Felix Doe",
+      accepted_at: "Universitas Indonesia",
+      profile_image: "/images/person__one.png",
+    },
+    {
+      testimony:
+        "Saya senang bisa belajar di Lentera Cendekia. Dengan bimbingan dari tentor yang ramah dan berpengalaman, saya merasa lebih termotivasi dan antusias dalam belajar. Terima kasih Lentera Cendekia!",
+      name: "Arthur Doe",
+      accepted_at: "Universitas Indonesia",
+      profile_image: "/images/person__one.png",
+    },
+    {
+      testimony:
+        "Saya senang bisa belajar di Lentera Cendekia. Dengan bimbingan dari tentor yang ramah dan berpengalaman, saya merasa lebih termotivasi dan antusias dalam belajar. Terima kasih Lentera Cendekia!",
+      name: "Jonathan Doe",
+      accepted_at: "Universitas Indonesia",
+      profile_image: "/images/person__one.png",
+    },
+  ],
+  faqs: [
+    {
+      question: "Apa itu Lentera Cendekia?",
+      answer:
+        "Lentera Cendekia merupakan lembaga bimbingan belajar yang berdiri sejak tahun 2018. Kami menyediakan layanan bimbingan belajar untuk siswa SD, SMP, SMA, dan persiapan UTBK.",
+    },
+    {
+      question: "Apa saja program yang ditawarkan oleh Lentera Cendekia?",
+      answer:
+        "Lentera Cendekia menawarkan program bimbingan belajar untuk siswa SD, SMP, SMA, dan persiapan UTBK.",
+    },
+    {
+      question: "Apa keunggulan dari Lentera Cendekia?",
+      answer:
+        "Lentera Cendekia menawarkan pendekatan belajar yang disesuaikan dengan kebutuhan setiap siswa, serta dukungan tentor yang ramah dan berpengalaman.",
+    },
+    {
+      question: "Bagaimana cara mendaftar di Lentera Cendekia?",
+      answer:
+        "Anda dapat mendaftar di Lentera Cendekia dengan menghubungi kontak yang tersedia di website kami.",
+    },
+  ],
   footer: {
     overview: {
       title: "Lentera Cendekia",
