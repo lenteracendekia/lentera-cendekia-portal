@@ -10,6 +10,7 @@ export const Advantages: React.FC<React.HTMLAttributes<HTMLDivElement>> = ({
     () => (
       <section {...rest}>
         <Header
+          id="advantages"
           title="Keunggulan"
           subtitle="Kenapa harus pilih LC?"
           direction="center"

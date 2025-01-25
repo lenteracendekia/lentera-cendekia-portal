@@ -22,8 +22,8 @@ export const Advantage: React.FC<AdventageProps> = ({
         {...rest}
         className={clsx(
           "flex flex-col items-center gap-12",
-          reverse && "md:flex-row-reverse",
-          !reverse && "md:flex-row"
+          reverse && "lg:flex-row-reverse",
+          !reverse && "lg:flex-row"
         )}
       >
         <Image
@@ -34,8 +34,8 @@ export const Advantage: React.FC<AdventageProps> = ({
         />
         <div
           className={clsx(
-            "flex flex-col justify-center gap-5 px-5 max-w-[770px]",
-            reverse && "text-right"
+            "flex flex-col justify-center text-center gap-5 px-5 max-w-[770px]",
+            reverse && "lg:text-right"
           )}
         >
           <h3 className="text-3xl font-medium text-neutral-base">{title}</h3>

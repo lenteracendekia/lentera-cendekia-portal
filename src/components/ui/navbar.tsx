@@ -21,29 +21,30 @@ export const Navbar: React.FC<HTMLAttributes<HTMLDivElement>> = () => {
   const [isSheetOpen, setIsSheetOpen] = useState<boolean>(false);
 
   const navigations = useMemo(() => {
-    if (params === "/") {
-      return (
-        <div className="hidden lg:flex lg:gap-6">
-          {NAVIGATIONS.map((nav, index) => (
-            <div key={index} className="cursor-pointer" onClick={nav.action}>
-              <span className="px-4 py-2 text-gray-800 dark:text-gray-200 hover:text-gray-600 dark:hover:text-gray-400">
-                {nav.title}
-              </span>
-            </div>
-          ))}
-        </div>
-      );
-    } else {
-      return (
-        <div>
-          {NAVIGATIONS.map((nav, index) => (
-            <Link href={DEFAULT_ROUTE} key={index} id={nav.id}>
-              <span>{nav.title}</span>
-            </Link>
-          ))}
-        </div>
-      );
-    }
+    // if (params === "/") {
+    return (
+      <div className="hidden lg:flex lg:gap-6">
+        {NAVIGATIONS.map((nav, index) => {
+          if (params === "/") {
+            return (
+              <div key={index} className="cursor-pointer" onClick={nav.action}>
+                <span className="px-4 py-2 text-gray-800 dark:text-gray-200 hover:text-gray-600 dark:hover:text-gray-400">
+                  {nav.title}
+                </span>
+              </div>
+            );
+          } else {
+            return (
+              <Link href={DEFAULT_ROUTE} key={index}>
+                <span className="px-4 py-2 text-gray-800 dark:text-gray-200 hover:text-gray-600 dark:hover:text-gray-400">
+                  {nav.title}
+                </span>
+              </Link>
+            );
+          }
+        })}
+      </div>
+    );
   }, [params]);
 
   return (
