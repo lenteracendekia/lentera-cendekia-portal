@@ -1,19 +1,16 @@
+"use client";
+
 import React, { useMemo } from "react";
 import { Brand } from "@/components/ui/brand";
-import { Facebook, Instagram, MessageCircleMore, Twitter } from "lucide-react";
+import { Facebook, Instagram, MapPin, MessageCircleMore } from "lucide-react";
+import Link from "next/link";
+import { scrollElement } from "@/utils/scroll-element";
 
 interface FooterProps extends React.HTMLAttributes<HTMLDivElement> {
   overview: {
     title: string;
     description: string;
   };
-  lists: {
-    list_title: string;
-    list_items: {
-      item_title: string;
-      action: () => void;
-    }[];
-  }[];
   contact: {
     title: string;
     phone: string;
@@ -24,11 +21,62 @@ interface FooterProps extends React.HTMLAttributes<HTMLDivElement> {
 
 export const Footer: React.FC<FooterProps> = ({
   overview,
-  lists,
   contact,
   ...rest
-}) =>
-  useMemo(
+}) => {
+  const memoizeLists = useMemo(
+    () => [
+      {
+        list_title: "Mata Pelajaran",
+        list_items: [
+          {
+            item_title: "Matematika",
+            action: () => scrollElement("programs"),
+          },
+          {
+            item_title: "Bahasa Indonesia",
+            action: () => scrollElement("programs"),
+          },
+          {
+            item_title: "Bahasa Inggris",
+            action: () => scrollElement("programs"),
+          },
+          {
+            item_title: "IPA",
+            action: () => scrollElement("programs"),
+          },
+          {
+            item_title: "IPS",
+            action: () => scrollElement("programs"),
+          },
+        ],
+      },
+      {
+        list_title: "Navigasi",
+        list_items: [
+          {
+            item_title: "Beranda",
+            action: () => scrollElement("hero"),
+          },
+          {
+            item_title: "Tentang Kami",
+            action: () => scrollElement("about"),
+          },
+          {
+            item_title: "Program",
+            action: () => scrollElement("programs"),
+          },
+          {
+            item_title: "Testimoni",
+            action: () => scrollElement("testimonials"),
+          },
+        ],
+      },
+    ],
+    []
+  );
+
+  return useMemo(
     () => (
       <footer className="bg-gray-50 text-gray-800 p-10 mt-24" {...rest}>
         <div className="max-w-screen-xl mx-auto px-4 md:px-8">
@@ -45,14 +93,16 @@ export const Footer: React.FC<FooterProps> = ({
               </p>
             </div>
 
-            {lists.map((list, index) => (
+            {memoizeLists.map((list, index) => (
               <div key={index}>
                 <h4 className="font-semibold text-lg text-gray-900 mb-4">
-                  Mata Pelajaran
+                  {list.list_title}
                 </h4>
                 <ul className="space-y-2 text-sm text-gray-600">
                   {list.list_items.map((item, itemIndex) => (
-                    <li key={itemIndex}>{item.item_title}</li>
+                    <li key={itemIndex} onClick={item.action}>
+                      {item.item_title}
+                    </li>
                   ))}
                 </ul>
               </div>
@@ -64,15 +114,27 @@ export const Footer: React.FC<FooterProps> = ({
               </h4>
               <p className="text-sm text-gray-600">
                 <strong>Hubungi Kami:</strong> <br />
-                {contact.phone}
+                <Link
+                  href="https://wa.me/+6285749688821"
+                  className="hover:text-neutral-30 transition-all duration-200"
+                >
+                  {contact.phone}
+                </Link>
               </p>
               <p className="text-sm text-gray-600 mt-4">
                 <strong>Email Kami Pada:</strong> <br />
-                {contact.email}
+                <Link
+                  href="mailto:lbblenteracendekia@gmail.com"
+                  className="hover:text-neutral-30 transition-all duration-200"
+                >
+                  {contact.email}
+                </Link>
               </p>
               <p className="text-sm text-gray-600 mt-4">
                 <strong>Alamat Kami:</strong> <br />
-                {contact.address}
+                <Link href="https://www.google.com/maps/place/LBB+Lentera+Cendekia/@-7.2774383,112.755251,17z">
+                  {contact.address}
+                </Link>
               </p>
             </div>
           </div>
@@ -80,22 +142,44 @@ export const Footer: React.FC<FooterProps> = ({
           <div className="flex flex-col items-center md:flex-row md:justify-between mt-10 border-t border-gray-200 pt-6 text-center text-sm text-gray-600">
             <p>© 2025 Lentera Cendekia, All Right Reserved.</p>
             <div className="flex justify-center space-x-4 mt-4 text-neutral-base">
-              <a href="#" className="hover:text-warning-60">
+              <a
+                href="https://www.facebook.com/profile.php?id=100071750721085"
+                className="hover:text-warning-60"
+              >
                 <Facebook />
               </a>
-              <a href="#" className="hover:text-warning-60">
+              <a
+                href="https://www.instagram.com/lenteracendekiasby/"
+                className="hover:text-warning-60"
+              >
                 <Instagram />
               </a>
-              <a href="#" className="hover:text-warning-60">
-                <Twitter />
-              </a>
-              <a href="#" className="hover:text-warning-60">
+              <a
+                href="https://wa.me/+6285749688821"
+                className="hover:text-warning-60"
+              >
                 <MessageCircleMore />
               </a>
             </div>
           </div>
+
+          <div className="fixed z-50 bottom-8 right-8 lg:bottom-12 lg:right-12 flex flex-col gap-4">
+            <Link
+              href="https://wa.me/+6285749688821"
+              className="flex justify-center items-center text-neutral-base bg-warning-base w-16 h-16 rounded-full hover:brightness-75 transition-all duration-200 cursor-pointer shadow-lg"
+            >
+              <MapPin size={32} />
+            </Link>
+            <Link
+              href="https://wa.me/+6285749688821"
+              className="flex justify-center items-center text-neutral-10 bg-success-base w-16 h-16 rounded-full hover:brightness-75 transition-all duration-200 cursor-pointer shadow-lg"
+            >
+              <MessageCircleMore size={32} />
+            </Link>
+          </div>
         </div>
       </footer>
     ),
-    [overview, lists, contact, rest]
+    [overview, contact, memoizeLists, rest]
   );
+};

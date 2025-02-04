@@ -7,13 +7,15 @@ import { useRouter } from "next/navigation";
 
 interface Testimony {
   name: string;
+  from: string;
   accepted_at: string;
   testimony: string;
 }
 
 export default function TestimonyDetailClient({
   name,
-  accepted_at,
+  from,
+  // accepted_at,
   testimony,
 }: Testimony) {
   const router = useRouter();
@@ -29,7 +31,7 @@ export default function TestimonyDetailClient({
           <ChevronLeft size={24} />
         </button>
       </header>
-      <main className="flex flex-col lg:flex-row gap-8 lg:gap-4 max-w-4xl mx-16 lg:mx-auto mt-8">
+      <main className="flex flex-col lg:flex-row gap-8 lg:gap-8 max-w-4xl mx-16 lg:mx-auto mt-8">
         <div className="flex flex-col  gap-5">
           <div className="relative lg:w-[400px]">
             <Image
@@ -38,16 +40,19 @@ export default function TestimonyDetailClient({
               width={300}
               height={300}
             />
-            <div className="absolute top-0 z-[-1] w-[300px] h-[300px] rounded-full bg-warning-50 opacity-70" />
-            <div className="absolute -bottom-2 z-[-3] w-[350px] h-[350px] rounded-full bg-warning-80" />
+            {/* <div className="absolute top-0 z-[-1] w-[300px] h-[300px] rounded-full bg-warning-50 opacity-70" />
+            <div className="absolute -bottom-2 z-[-3] w-[350px] h-[350px] rounded-full bg-warning-80" /> */}
           </div>
           <div className="bg-neutral-10 rounded-lg p-4">
             <h1 className="text-3xl font-bold">{name}</h1>
-            <p className="text-lg text-neutral-40">{accepted_at}</p>
+            <p className="text-lg text-neutral-40">dari {from}</p>
           </div>
         </div>
-        <div>
-          <p className="text-2xl text-neutral-40">{testimony}</p>
+        <div className="lg:h-[70dvh] lg:overflow-scroll scrollbar-hidden">
+          <p
+            className="text-2xl text-neutral-40 text-justify"
+            dangerouslySetInnerHTML={{ __html: testimony }}
+          />
         </div>
       </main>
     </div>

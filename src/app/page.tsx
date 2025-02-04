@@ -22,7 +22,7 @@ export default function Home() {
           image={CONTENT.hero.image}
         />
         <div className="flex flex-col gap-y-24 px-5">
-          <About />
+          <About className="mt-24" />
           <Advantages />
           <Programs />
           <Facilities className="px-12" />

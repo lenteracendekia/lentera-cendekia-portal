@@ -11,7 +11,7 @@ import {
 } from "@/components/ui/carousel";
 import { Header } from "@/components/ui/header";
 import Image from "next/image";
-import { useState, useMemo } from "react";
+import { useState, useMemo, useEffect } from "react";
 
 export const Activities: React.FC<React.HTMLAttributes<HTMLDivElement>> = ({
   className,
@@ -19,6 +19,17 @@ export const Activities: React.FC<React.HTMLAttributes<HTMLDivElement>> = ({
 }) => {
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const [_, setApi] = useState<CarouselApi>();
+
+  const [activityImages, setActivityImages] = useState<string[]>([]);
+
+  useEffect(() => {
+    async function fetchImages() {
+      const res = await fetch("/api/activities");
+      const data = await res.json();
+      setActivityImages(data);
+    }
+    fetchImages();
+  }, []);
 
   return useMemo(
     () => (
@@ -39,19 +50,17 @@ export const Activities: React.FC<React.HTMLAttributes<HTMLDivElement>> = ({
             }}
           >
             <CarouselContent>
-              {Array.from({ length: 5 }).map((_, index) => (
+              {activityImages.map((image, index) => (
                 <CarouselItem key={index}>
-                  <Card>
-                    <CardContent className="flex items-center justify-center p-4">
-                      <span className="text-4xl font-semibold">
-                        <Image
-                          src="/images/hero.png"
-                          alt="Activity Image"
-                          width={880}
-                          height={880}
-                          className="rounded-xl"
-                        />
-                      </span>
+                  <Card className="h-[390px] flex items-center justify-center">
+                    <CardContent className="flex min-w-full min-h-full flex-col items-center justify-center gap-4 p-3">
+                      <Image
+                        src={image}
+                        alt={`Activity ${index + 1}`}
+                        width={300}
+                        height={300}
+                        className="rounded-xl min-w-full min-h-full object-cover"
+                      />
                     </CardContent>
                   </Card>
                 </CarouselItem>
@@ -65,6 +74,6 @@ export const Activities: React.FC<React.HTMLAttributes<HTMLDivElement>> = ({
         </div>
       </section>
     ),
-    [className, rest]
+    [className, activityImages, rest]
   );
 };

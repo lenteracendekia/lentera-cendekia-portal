@@ -1,4 +1,5 @@
 import clsx from "clsx";
+import Image from "next/image";
 import { useMemo } from "react";
 
 interface BrandProps extends React.HTMLAttributes<HTMLDivElement> {
@@ -9,7 +10,7 @@ export const Brand = ({ title, className = "", ...rest }: BrandProps) =>
   useMemo(
     () => (
       <div {...rest} className={clsx(className, "flex items-center gap-3")}>
-        <svg
+        {/* <svg
           width="30"
           height="30"
           viewBox="0 0 300 300"
@@ -33,8 +34,15 @@ export const Brand = ({ title, className = "", ...rest }: BrandProps) =>
             d="M108.4 168C113.9 168 118.9 166.65 123.4 163.95C127.8 161.15 131.3 157.45 133.9 152.85C136.5 148.25 137.8 143.1 137.8 137.4L137.65 90.6C137.65 85.1 136.4 80.1 133.9 75.6C131.3 71 127.8 67.35 123.4 64.65C118.9 61.85 113.9 60.45 108.4 60.45C102.9 60.45 97.95 61.8 93.55 64.5C89.15 67.2 85.65 70.85 83.05 75.45C80.45 79.95 79.15 85 79.15 90.6V97.5C79.15 97.9 79.35 98.1 79.75 98.1H96.55C96.95 98.1 97.15 97.9 97.15 97.5V90.6C97.15 87.3 98.25 84.45 100.45 82.05C102.55 79.65 105.2 78.45 108.4 78.45C112 78.45 114.75 79.7 116.65 82.2C118.55 84.6 119.5 87.4 119.5 90.6V137.4C119.5 141.1 118.45 144.1 116.35 146.4C114.15 148.7 111.5 149.85 108.4 149.85C105.2 149.85 102.55 148.6 100.45 146.1C98.25 143.5 97.15 140.6 97.15 137.4V130.5C97.15 130.1 96.95 129.9 96.55 129.9H79.6C79.2 129.9 79 130.1 79 130.5V137.4C79 143.1 80.35 148.25 83.05 152.85C85.65 157.45 89.15 161.15 93.55 163.95C97.95 166.65 102.9 168 108.4 168Z"
             fill="#1B1B1B"
           />
-        </svg>
-        <span className="font-semibold">{title}</span>
+        </svg> */}
+        <Image
+          src="/favicon/apple-touch-icon.png"
+          alt="Lentera Cendekia Logo"
+          width={52}
+          height={48}
+          className="-mt-4"
+        />
+        <span className="font-semibold text-xl">{title}</span>
       </div>
     ),
     [title, className, rest]

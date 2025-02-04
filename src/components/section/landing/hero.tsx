@@ -18,6 +18,7 @@ export const Hero: React.FC<HeroProps> = ({
     () => (
       <section
         {...rest}
+        id="hero"
         className={clsx("relative h-[100dvh] bg-cover bg-center", className)}
         style={{ backgroundImage: `url(${image})` }}
       >
