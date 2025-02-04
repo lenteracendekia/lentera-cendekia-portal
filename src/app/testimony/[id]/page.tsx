@@ -11,6 +11,7 @@ export default async function TestimonyDetail(props: { params: tParams }) {
     <TestimonyDetailClient
       testimony={testimony.testimony}
       name={testimony.name}
+      from={testimony.from}
       accepted_at={testimony.accepted_at}
     />
   );

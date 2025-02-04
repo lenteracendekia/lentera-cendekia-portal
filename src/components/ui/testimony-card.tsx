@@ -10,11 +10,14 @@ interface TestimonyCardProps extends React.HTMLAttributes<HTMLDivElement> {
   name: string;
   accepted_at: string;
   profile_image: string;
+  from: string;
 }
 
 export const TestimonyCard: React.FC<TestimonyCardProps> = ({
   testimony,
   name,
+  from,
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   accepted_at,
   profile_image,
   ...rest
@@ -29,17 +32,16 @@ export const TestimonyCard: React.FC<TestimonyCardProps> = ({
           <QuoteIcon className="w-5 h-5 md:w-6 md:h-6 text-neutral-base" />
         </div>
         <CardContent className="flex flex-col flex-1 pt-6">
-          <div className="mb-5 text-xs text-right md:text-sm text-neutral-base">
+          {/* <div className="mb-5 text-xs text-right md:text-sm text-neutral-base">
             Diterima di <b>{accepted_at}</b>
-          </div>
-          <div className="flex-1">
+          </div> */}
+          <div className="flex-1 mt-4">
             <p
               className={clsx(
                 "text-neutral-40 mb-3 text-xs md:text-sm line-clamp-3"
               )}
-            >
-              {testimony}
-            </p>
+              dangerouslySetInnerHTML={{ __html: testimony }}
+            ></p>
             <Link
               href={`/testimony/${name.toLowerCase().replace(/\s/g, "-")}`}
               className="text-xs text-blue-600 md:text-sm hover:underline"
@@ -55,11 +57,14 @@ export const TestimonyCard: React.FC<TestimonyCardProps> = ({
               height={50}
               className="mr-2 rounded-xl"
             />
-            <span className="font-semibold text-md">{name}</span>
+            <div className="ms-2">
+              <span className="font-semibold text-md">{name}</span>
+              <p>dari {from}</p>
+            </div>
           </div>
         </CardContent>
       </Card>
     ),
-    [rest, accepted_at, testimony, profile_image, name]
+    [rest, testimony, profile_image, from, name]
   );
 };
