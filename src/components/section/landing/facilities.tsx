@@ -25,14 +25,16 @@ export const Facilities: React.FC<React.HTMLAttributes<HTMLDivElement>> = ({
                 icon={<AirVent size={40} />}
                 title="Full AC & Wifi"
                 description="Kelas dil lengkapi dengan Air Conditioner dan Wifi yang akan menunjang kenyamanan belajar anak"
+                base_icon_color="bg-primary-10 text-primary-60"
               />
               <FacilityCard
                 icon={<FlaskConical size={40} />}
                 title="Praktikum Kelas Offline/Online"
                 description="Terdapat praktikum untuk dapat membantu siswa dalam memahami materi pembelajaran dengan mudah"
+                base_icon_color="bg-error-10 text-error-base"
               />
             </div>
-            <div className="relative overflow-hidden flex items-end justify-center w-full h-[500px] md:h-full bg-cover bg-center rounded-xl bg-[url('/images/hero.png')] border-[1px] border-neutral-20">
+            <div className="relative overflow-hidden flex items-end justify-center w-full h-[500px] md:h-full bg-cover bg-center rounded-xl bg-[url('/images/cloud.jpg')] border-[1px] border-neutral-20">
               <Image
                 src="/images/person__one.png"
                 alt="mockup1"
@@ -47,11 +49,13 @@ export const Facilities: React.FC<React.HTMLAttributes<HTMLDivElement>> = ({
                 icon={<User size={40} />}
                 title="Kelas Eksklusif Pendampingan Ujian Sekolah"
                 description="Membuat kelompok belajar kecil dengan 5-6 anak, yang akan mendapatkan pendampingan khusus untuk memaksimalkan hasil ujian sekolah"
+                base_icon_color="bg-warning-10 text-warning-60"
               />
               <FacilityCard
                 icon={<Video size={40} />}
                 title="Follow Up"
                 description="Bimbingan via Whatsapp, G-Meet atau perantara lain yang dapat membantu siswa memahami tugas atau pun materi yang diberikan"
+                base_icon_color="bg-primary-10 text-primary-60"
               />
             </div>
           </div>

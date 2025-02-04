@@ -16,7 +16,7 @@ export const Programs: React.FC<React.HTMLAttributes<HTMLDivElement>> = ({
           subtitle="Program Unggulan Kami"
           direction="center"
         />
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 place-items-center mx-auto md:w-[80%]">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 place-items-center mx-auto md:w-[60%]">
           {CONTENT.programs.map((program, index) => (
             <ProgramCard
               key={index}
