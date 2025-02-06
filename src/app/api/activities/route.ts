@@ -10,7 +10,9 @@ export async function GET() {
     const files = await fs.readdir(activitiesDir);
 
     const imageFiles = files.filter((file) =>
-      [".jpg", ".png", ".jpeg"].includes(path.extname(file).toLowerCase())
+      [".jpg", ".png", ".jpeg", ".webp"].includes(
+        path.extname(file).toLowerCase()
+      )
     );
 
     const imagePaths = imageFiles.map((file) => `/images/activities/${file}`);

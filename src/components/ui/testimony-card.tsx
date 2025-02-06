@@ -38,13 +38,15 @@ export const TestimonyCard: React.FC<TestimonyCardProps> = ({
           <div className="flex-1 mt-4">
             <p
               className={clsx(
-                "text-neutral-40 mb-3 text-xs md:text-sm line-clamp-3"
+                "text-neutral-50 mb-3 text-xs md:text-sm line-clamp-3"
               )}
               dangerouslySetInnerHTML={{ __html: testimony }}
             ></p>
             <Link
               href={`/testimony/${name.toLowerCase().replace(/\s/g, "-")}`}
               className="text-xs text-blue-600 md:text-sm hover:underline"
+              aria-label={`Baca Testimoni ${name}`}
+              aria-description="Baca testimoni selengkapnya dari testimoni ini"
             >
               Baca Lengkapnya &rarr;
             </Link>
