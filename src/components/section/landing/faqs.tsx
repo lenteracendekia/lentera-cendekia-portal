@@ -38,7 +38,7 @@ const FaqCard = ({ title, content }: FaqCardProps) => {
   return (
     <div className="col-span-2 md:col-span-1 flex flex-col gap-3 bg-white border-[1px] border-neutral-20 rounded-xl md:p-6 p-3 w-fill">
       <p className="font-medium md:text-2xl text-xl text-[#1B1B1B]">{title}</p>
-      <p className="text-base text-neutral-40">{content}</p>
+      <p className="text-base text-neutral-50">{content}</p>
     </div>
   );
 };

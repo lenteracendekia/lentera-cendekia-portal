@@ -38,7 +38,7 @@ export const ProgramCard: React.FC<ProgramCardProps> = ({
               <h3 className="text-xl font-semibold text-neutral-base">
                 {name}
               </h3>
-              <p className="mt-2 text-md text-neutral-40">
+              <p className="mt-2 text-md text-neutral-50">
                 {short_description}
               </p>
             </div>

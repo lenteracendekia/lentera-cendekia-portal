@@ -33,7 +33,7 @@ export const FacilityCard: React.FC<FacilityCardProps> = ({
           <p className="font-medium md:text-[28px] text-xl text-neutral-base">
             {title}
           </p>
-          <p className="text-base text-neutral-40">{description}</p>
+          <p className="text-base text-neutral-50">{description}</p>
         </div>
       </div>
     ),

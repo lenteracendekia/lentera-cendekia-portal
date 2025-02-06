@@ -4,17 +4,17 @@ export const CONTENT = {
       'Bimbingan dan Dukungan Belajar\nUntuk <span style="background-color: var(--warning-base); color: var(--neutral-base); padding: 0 8px; z-index: -5;">Impian</span> Akademis\ndan Karir',
     subtitle:
       "Kami selalu siap membantu Anda meraih impian akademis dan karir Anda",
-    image: "/images/hero.png",
+    image: "/images/hero.webp",
   },
   about: {
     one: {
-      image: "/images/about__one.svg",
+      image: "/images/about__one.webp",
       contents: [
         'Lembaga Bimbingan Belajar (LBB) Lentera Cendekia hadir\nuntuk mengatasi permasalahan belajar siswa dan wali siswa.\nKami menciptakan lingkungan belajar yang menyenangkan melalui metode "Fun and Meaningful Learning", yang memastikan siswa memahami konsep dasar, bukan hanya menghafal',
       ],
     },
     two: {
-      image: "/images/about__two.svg",
+      image: "/images/about__two.webp",
       contents: [
         "Dengan tentor yang kompeten dan ramah, serta kegiatan menarik seperti praktikum dan outing class, Lentera Cendekia menjadikan belajar lebih menarik dan tidak membosankan. Kami juga menyediakan pendekatan yang disesuaikan dengan kebutuhan setiap siswa.",
         "<br/>Di Lentera Cendekia, belajar menjadi petualangan yang menyenangkan dan penuh makna. Mari bergabung dan lihat bagaimana kami dapat membuat proses belajar anak Anda lebih efektif dan menyenangkan.",
@@ -27,21 +27,21 @@ export const CONTENT = {
       title: "Nikmati Kemudahan Belajar yang Interaktif dan Menyenangkan",
       description:
         "Dengan dukungan tentor yang ramah dan berpengalaman, serta berbagai aktivitas menarik seperti simulasi, praktikum, dan outing class, siswa akan merasa lebih termotivasi dan antusias dalam belajar",
-      image: "/images/unique_selling_point__one.svg",
+      image: "/images/unique_selling_point__one.webp",
     },
     {
       id: "unique-selling-point-2",
       title: "Pendekatan yang Disesuaikan",
       description:
         "Kami menyediakan pendekatan yang disesuaikan dengan kebutuhan setiap siswa, sehingga setiap siswa dapat belajar sesuai dengan kemampuan dan minatnya",
-      image: "/images/unique_selling_point__two.svg",
+      image: "/images/unique_selling_point__two.webp",
     },
     {
       id: "unique-selling-point-3",
       title: "Pendekatan Pembelajaran yang Disesuaikan",
       description:
         "Pendekatan belajar di Lentera Cendekia disesuaikan dengan kebutuhan dan gaya belajar setiap siswa, memastikan bimbingan yang optimal dan personal.",
-      image: "/images/unique_selling_point__three.svg",
+      image: "/images/unique_selling_point__three.webp",
     },
   ],
   programs: [
@@ -49,49 +49,49 @@ export const CONTENT = {
       name: "PROGRAM REGULER SD, SMP, DAN SMA",
       short_description:
         "Program bimbingan belajar untuk siswa Sekolah Dasar, Sekolah Menengah Pertama, dan Sekolah Menengah Atas",
-      image: "/images/top_program__one.svg",
+      image: "/images/top_program__one.webp",
     },
     {
       name: "PROGRAM PRIVAT",
       short_description:
         "Program bimbingan belajar secara privat untuk siswa/i yang membutuhkan bimbingan khusus",
-      image: "/images/top_program__one.svg",
+      image: "/images/top_program__one.webp",
     },
     {
       name: "PROGRAM KHUSUS UTBK",
       short_description:
         "Program bimbingan belajar untuk siswa Sekolah Menengah Pertama",
-      image: "/images/top_program__one.svg",
+      image: "/images/top_program__one.webp",
     },
     {
       name: "ENGLISH FOR HOLIDAY",
       short_description:
         "Memanfaatkan liburan semester untuk belajar bahasa Inggris secara intensif",
-      image: "/images/top_program__one.svg",
+      image: "/images/top_program__one.webp",
     },
     {
       name: "PROGRAM UNTUK INTERNATIONAL CLASS",
       short_description:
         "Program yang dikhususkan untuk siswa Kelas International",
-      image: "/images/top_program__one.svg",
+      image: "/images/top_program__one.webp",
     },
   ],
   activities: [],
   teachers: [
     {
-      image: "/images/person__one.png",
+      image: "/images/person__one.webp",
       name: "John Doe",
       role: "Guru Matematika",
       graduated_at: "Universitas Indonesia",
     },
     {
-      image: "/images/person__one.png",
+      image: "/images/person__one.webp",
       name: "Jane Doe",
       role: "Guru Bahasa Indonesia",
       graduated_at: "Universitas Indonesia",
     },
     {
-      image: "/images/person__one.png",
+      image: "/images/person__one.webp",
       name: "Jane Doe",
       role: "Guru Bahasa Indonesia",
       graduated_at: "Universitas Indonesia",
@@ -104,7 +104,7 @@ export const CONTENT = {
       name: "Harist M Abidzar",
       from: "SMAN 4 Surabaya",
       accepted_at: "",
-      profile_image: "/images/person__one.png",
+      profile_image: "/images/person__one.webp",
     },
     {
       testimony:
@@ -112,7 +112,7 @@ export const CONTENT = {
       name: "Nasya Mulya P",
       from: "SMAN 2 Surabaya",
       accepted_at: "",
-      profile_image: "/images/person__one.png",
+      profile_image: "/images/person__one.webp",
     },
     {
       testimony:
@@ -120,7 +120,7 @@ export const CONTENT = {
       name: "Amelia Nisrina",
       from: "SMAN 1 Surabaya",
       accepted_at: "",
-      profile_image: "/images/person__one.png",
+      profile_image: "/images/person__one.webp",
     },
     {
       testimony:
@@ -128,7 +128,7 @@ export const CONTENT = {
       name: "Putu Windah F.C.D",
       from: "SMAN 16 Surabaya",
       accepted_at: "",
-      profile_image: "/images/person__one.png",
+      profile_image: "/images/person__one.webp",
     },
     {
       testimony:
@@ -136,7 +136,7 @@ export const CONTENT = {
       name: "Ayu Putu Gita Padma Gayatri",
       from: "SMAN 1 SOKO Mojokerto",
       accepted_at: "",
-      profile_image: "/images/person__one.png",
+      profile_image: "/images/person__one.webp",
     },
     {
       testimony:
@@ -144,7 +144,7 @@ export const CONTENT = {
       name: "Virna Amrita",
       from: "SMAN 5 Surabaya",
       accepted_at: "",
-      profile_image: "/images/person__one.png",
+      profile_image: "/images/person__one.webp",
     },
     {
       testimony:
@@ -152,7 +152,7 @@ export const CONTENT = {
       name: "Mama Gangga",
       from: "Mojokerto",
       accepted_at: "",
-      profile_image: "/images/person__one.png",
+      profile_image: "/images/person__one.webp",
     },
   ],
   faqs: [

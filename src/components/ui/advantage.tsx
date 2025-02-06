@@ -39,7 +39,7 @@ export const Advantage: React.FC<AdventageProps> = ({
           )}
         >
           <h3 className="text-3xl font-medium text-neutral-base">{title}</h3>
-          <p className="text-2xl text-neutral-40">{description}</p>
+          <p className="text-2xl text-neutral-50">{description}</p>
         </div>
       </div>
     ),
