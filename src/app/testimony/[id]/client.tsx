@@ -35,7 +35,7 @@ export default function TestimonyDetailClient({
         <div className="flex flex-col  gap-5">
           <div className="relative lg:w-[400px]">
             <Image
-              src="/images/person__one.png"
+              src="/images/person__one.webp"
               alt="Testimony Image"
               width={300}
               height={300}

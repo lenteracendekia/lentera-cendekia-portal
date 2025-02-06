@@ -41,7 +41,7 @@ const Section: React.FC<SectionProps> = ({
         {content.map((text, index) => (
           <p
             key={index}
-            className="text-2xl text-neutral-40"
+            className="text-2xl text-neutral-50"
             dangerouslySetInnerHTML={{ __html: text }}
           />
         ))}

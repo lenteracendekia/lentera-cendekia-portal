@@ -34,9 +34,9 @@ export const Facilities: React.FC<React.HTMLAttributes<HTMLDivElement>> = ({
                 base_icon_color="bg-error-10 text-error-base"
               />
             </div>
-            <div className="relative overflow-hidden flex items-end justify-center w-full h-[500px] md:h-full bg-cover bg-center rounded-xl bg-[url('/images/cloud.jpg')] border-[1px] border-neutral-20">
+            <div className="relative overflow-hidden flex items-end justify-center w-full h-[500px] md:h-full bg-cover bg-center rounded-xl bg-[url('/images/cloud.webp')] border-[1px] border-neutral-20">
               <Image
-                src="/images/person__one.png"
+                src="/images/person__one.webp"
                 alt="mockup1"
                 width={1000}
                 height={1000}
